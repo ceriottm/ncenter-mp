@@ -104,7 +104,7 @@ def compute_rho3i_lambda(rho2i_l, rhoi, L, cg, prho2i_l):
 
                         continue
                     il1l2=  index_l1l2[k].index((l1,l2))
-                    print(l1, l2,k, il1l2)
+                    #print(l1, l2,k, il1l2)
                     rho3ilambda[...,il,:] = cg.combine_einsum(rhoi[..., lm_slice(l3)],
                                                               rho2i_l[k][...,il1l2,:],
                                                         L, combination_string="ian,iANbM->ianANbM")
